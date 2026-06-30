@@ -1,101 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PV Highway Germany</title>
 
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PV Highway Germany</title>
-
-    <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css" rel="stylesheet">
 </head>
 
 <body>
-
-<header>
-
-    <div class="logo">
-        PV Highway Germany
-    </div>
+  <header>
+    <div class="logo">PV Highway Germany</div>
 
     <nav>
-
-        <a href="#">Map</a>
-        <a href="#">Dataset</a>
-        <a href="#">Methodology</a>
-        <a href="#">Publication</a>
-
+      <a href="#map-section">Map</a>
+      <a href="#dataset">Dataset</a>
+      <a href="#methodology">Methodology</a>
+      <a href="#publication">Publication</a>
     </nav>
+  </header>
 
-</header>
+  <main>
+    <section class="hero">
+      <span class="badge">Open Data Visualization</span>
 
-<main>
+      <h1>Photovoltaic Potential on German Highway Infrastructure</h1>
 
-<section class="hero">
-
-    <span class="badge">Open Data</span>
-
-    <h1>
-        Photovoltaic Potential on German Highway Infrastructure
-    </h1>
-
-    <p>
-
+      <p>
         Explore Germany-wide photovoltaic suitability along motorway infrastructure.
-        The interactive map visualizes the final assessment dataset generated through
+        The interactive map visualizes the assessment dataset generated through
         automated geospatial analysis and computer vision.
+      </p>
 
-    </p>
+      <div class="buttons">
+        <a class="primary" href="#map-section">Explore Map</a>
+        <a class="secondary" href="#dataset">Zenodo Dataset</a>
+      </div>
+    </section>
 
-    <div class="buttons">
+    <section id="map-section" class="map-section">
+      <div class="section-header">
+        <span class="badge">Interactive Map</span>
+        <h2>Germany-wide PV Potential Explorer</h2>
+      </div>
 
-        <a class="primary" href="#">Explore Map</a>
+      <div id="map"></div>
+    </section>
 
-        <a class="secondary" href="#">Zenodo</a>
+    <section class="cards">
+      <div class="card">
+        <h2>Interactive Map</h2>
+        <p>Explore candidate areas and suitability classes directly in your browser.</p>
+      </div>
 
-    </div>
+      <div id="dataset" class="card">
+        <h2>Open Dataset</h2>
+        <p>The complete dataset will be hosted, versioned, and cited through Zenodo.</p>
+      </div>
 
-</section>
+      <div id="methodology" class="card">
+        <h2>Methodology</h2>
+        <p>Automated assessment using aerial imagery, computer vision, and geospatial scoring.</p>
+      </div>
+    </section>
+  </main>
 
-<section class="cards">
-
-<div class="card">
-
-<h2>Interactive Map</h2>
-
-<p>
-Explore the complete PV suitability assessment directly in your browser.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Open Dataset</h2>
-
-<p>
-Download the complete dataset together with metadata and documentation.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Methodology</h2>
-
-<p>
-Read about the computer vision and geospatial processing pipeline.
-</p>
-
-</div>
-
-</section>
-
-</main>
-
+  <script src="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
