@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>PV Highway Germany</title>
 
   <link rel="stylesheet" href="style.css" />
@@ -11,138 +12,65 @@
 
 <body>
   <header class="site-header">
-    <div class="logo">PV Highway Germany</div>
+    <a class="logo" href="#">PV Highway Germany</a>
 
     <nav>
-      <a href="#map">Map</a>
-      <a href="#dataset">Dataset</a>
+      <a href="#map-section">Map</a>
+      <a href="#about">About</a>
       <a href="#methodology">Methodology</a>
-      <a href="#contact">Contact</a>
+      <a href="#dataset">Dataset</a>
+      <a href="#citation">Citation</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div>
-        <span class="badge">Open Data · Computer Vision · Geospatial AI</span>
+      <span class="badge">Open Data Visualization</span>
 
-        <h1>Photovoltaic Potential on German Highway Infrastructure</h1>
+      <h1>Photovoltaic Potential on German Highway Infrastructure</h1>
 
-        <p>
-          Interactive visualization of Germany-wide photovoltaic suitability along
-          motorway-adjacent land, derived from automated geospatial analysis and
-          computer vision.
-        </p>
+      <p>
+        Interactive map interface for exploring the project dataset.
+      </p>
 
-        <div class="buttons">
-          <a class="primary" href="#map">Explore Map</a>
-          <a class="secondary" href="#dataset">Zenodo Dataset</a>
-        </div>
-      </div>
-
-      <div class="hero-panel">
-        <div class="metric">
-          <span>Coverage</span>
-          <strong>Germany</strong>
-        </div>
-        <div class="metric">
-          <span>Focus</span>
-          <strong>Highway PV</strong>
-        </div>
-        <div class="metric">
-          <span>Method</span>
-          <strong>CV + GIS</strong>
-        </div>
+      <div class="buttons">
+        <a class="primary" href="#map-section">Explore Map</a>
+        <a class="secondary" href="#dataset">Download Dataset</a>
       </div>
     </section>
 
-    <section class="kpis">
-      <div class="kpi">
-        <span>Dataset</span>
-        <strong>Open Data</strong>
+    <section id="map-section" class="map-section">
+      <div class="section-heading">
+        <span class="badge">Interactive Map</span>
+        <h2>Map Explorer</h2>
       </div>
-      <div class="kpi">
-        <span>Hosting</span>
-        <strong>Zenodo</strong>
-      </div>
-      <div class="kpi">
-        <span>Visualization</span>
-        <strong>MapLibre</strong>
-      </div>
-      <div class="kpi">
-        <span>Status</span>
-        <strong>Preview</strong>
-      </div>
+
+      <div id="map"></div>
     </section>
 
-    <section class="map-area">
-      <div class="section-title">
-        <span class="badge">Interactive Explorer</span>
-        <h2>PV Potential Map</h2>
-      </div>
-
-      <div class="map-shell">
-        <aside class="map-panel">
-          <h3>Layers</h3>
-
-          <label>
-            <input type="checkbox" checked />
-            Candidate areas
-          </label>
-
-          <label>
-            <input type="checkbox" checked />
-            Suitability classes
-          </label>
-
-          <label>
-            <input type="checkbox" />
-            Highway corridor
-          </label>
-
-          <div class="legend">
-            <h3>Suitability</h3>
-            <p><span class="dot good"></span> High</p>
-            <p><span class="dot medium"></span> Medium</p>
-            <p><span class="dot low"></span> Low</p>
-          </div>
-        </aside>
-
-        <div id="map"></div>
-      </div>
+    <section id="about" class="content-section">
+      <h2>About the Project</h2>
+      <p>Project description will be added here.</p>
     </section>
 
-    <section class="cards">
-      <article id="dataset" class="card">
-        <h2>Dataset</h2>
-        <p>
-          The complete geospatial dataset is hosted, versioned, and cited separately
-          through Zenodo. This repository only contains the visualization website.
-        </p>
-        <a href="#">Zenodo link coming soon →</a>
-      </article>
+    <section id="methodology" class="content-section">
+      <h2>Methodology</h2>
+      <p>Methodology description will be added here.</p>
+    </section>
 
-      <article id="methodology" class="card">
-        <h2>Methodology</h2>
-        <p>
-          Candidate areas are derived from aerial imagery, semantic segmentation,
-          parcel constraints, protected-area exclusions, shadow analysis, solar
-          irradiation, and grid proximity scoring.
-        </p>
-      </article>
+    <section id="dataset" class="content-section">
+      <h2>Dataset</h2>
+      <p>Dataset information and download links will be added here.</p>
+    </section>
 
-      <article class="card">
-        <h2>Publication</h2>
-        <p>
-          This page is designed as a public project interface for the accompanying
-          Open Data release and scientific documentation.
-        </p>
-      </article>
+    <section id="citation" class="content-section">
+      <h2>Citation</h2>
+      <p>Citation information will be added here.</p>
     </section>
   </main>
 
-  <footer id="contact">
-    <p>© PV Highway Germany · Open Data Visualization</p>
+  <footer>
+    <p>PV Highway Germany · Open Data Visualization</p>
   </footer>
 
   <script src="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
